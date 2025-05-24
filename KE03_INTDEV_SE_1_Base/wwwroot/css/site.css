@@ -1,0 +1,88 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.producten img {
+    height: 200px;
+    width: 240px;
+    justify-content: center;
+}
+
+
+.box-container {
+    background-color: rgb(120, 120, 120);
+    height: 250px;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+}
+
+.producten-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.reclame{
+    text-align:center;
+}
+.searchbar-container {
+    position: relative;
+    left: 10%;
+}
+
+
+.search-bar {
+    border: 2px solid #ffffff;
+    height: 40px;
+    width: 190px;
+    border-radius: 20px;
+    background-color: rgb(1, 1, 1);
+}
+
+.tekst {
+    height: 30%;
+    width: 100px;
+    border: none;
+    position: relative;
+    left: 10%;
+    background-color: rgb(0, 0, 0);
+    top: 25%;
+}
+
+.vergrootglas {
+    position: relative;
+    top: 7px;
+    bottom: 40px;
+    left: 50px;
+    height: 25px;
+    width: 25px;
+}
+
+.navbar-brand{
+    font-size: 1.2rem;
+}
