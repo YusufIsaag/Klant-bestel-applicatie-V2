@@ -1,56 +1,54 @@
-# Klant Bestel Applicatie - KE03_INTDEV_SE_1
+# Customer Order Application - KE03_INTDEV_SE_1
 
-Deze webapplicatie is ontwikkeld voor de voor het vak Interface Development op de opleiding HBO-ICT (2024/2025, Blok 4) aan Zuyd Hogeschool.
+This web application was developed for the course Interface Development in the HBO-ICT program (2024/2025, Block 4) at Zuyd University of Applied Sciences.
 
-## Overzicht
+## Overview
 
-Deze applicatie is een **klant bestel applicatie** voor Matrix Inc., gerealiseerd met **Razor Pages in ASP.NET Core**.  
-Het stelt klanten in staat om meerdere producten tegelijk te bestellen en hun orderhistorie in te zien.
-
----
-
-## Functionaliteiten
-
-- Producten bekijken en selecteren  
-- Meerdere producten tegelijk aan de winkelwagen toevoegen  
-- Bestellingen plaatsen  
-- Overzicht van eerdere bestellingen (orderhistorie) bekijken  
-- Responsive design voor gebruik op verschillende schermformaten  
-- Gebruik van HCI designprincipes voor een optimale gebruikerservaring  
+This application is a **customer order application** for Matrix Inc., built using **Razor Pages in ASP.NET Core**.  
+It allows customers to order multiple products at once and view their order history.
 
 ---
 
-## Technologieën
+## Features
+
+- View and select products  
+- Add multiple products to the shopping cart simultaneously  
+- Place orders  
+- View previous orders (order history)  
+- Responsive design for use on different screen sizes  
+- Use of HCI design principles for an optimal user experience  
+
+---
+
+## Technologies
 
 - ASP.NET Core Razor Pages  
 - C#  
 - Entity Framework Core (Data Access Layer)  
-- HTML5 / CSS3 (inclusief responsive design)  
-- Bootstrap (voor styling en layout)  
+- HTML5 / CSS3 (including responsive design)  
+- Bootstrap (for styling and layout)  
 
 ---
 
-## Startpunt
+## Starting Point
 
-Deze oplossing is gebaseerd op de basiscode van Zuyd Hogeschool:  
+This solution is based on the base code from Zuyd University of Applied Sciences:  
 [KE03_INTDEV_SE_1_Base](https://github.com/ZuydUniversity/KE03_INTDEV_SE_1_Base.git)
 
 ---
 
-## Gebruik
+## Usage
 
-1. Clone deze repository  
-2. Open de Visual Studio solution  
-3. Build en run de applicatie  
-4. Je kunt producten bekijken, toevoegen aan je winkelwagen en bestellingen plaatsen  
-5. Je kunt je bestelhistorie bekijken na inloggen  
-
----
-
-## Versiebeheer
-
-De ontwikkeling van deze applicatie is bijgehouden via meerdere commits op deze GitHub repository.  
+1. Clone this repository  
+2. Open the Visual Studio solution  
+3. Build and run the application  
+4. You can view products, add them to your shopping cart, and place orders  
+5. You can view your order history after logging in  
 
 ---
 
+## Version Control
 
+The development of this application has been tracked through multiple commits in this GitHub repository.  
+
+---
