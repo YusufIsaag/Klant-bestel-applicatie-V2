@@ -1,4 +1,4 @@
-# Customer Order Application - KE03_INTDEV_SE_1
+# Customer Order Application
 
 This web application was developed for the course Interface Development in the HBO-ICT program (2024/2025, Block 4) at Zuyd University of Applied Sciences.
 
