@@ -2,3 +2,57 @@
 @model KE03_INTDEV_SE_1_Base.Pages.Product1.Product1Model
 @{
 }
+
+<div class="pagina-container">
+    <div class="items-container">
+        <h1 class="naam-product">Gegroefde kogellager</h1>
+        <hr>
+        <div class="product-boven">
+            <div class="product-links">
+                    <img class="product-foto" src="https://www.gnesato.com/wp-content/uploads/2021/07/14706106.jpg" alt="Gegroefde kogellager" />
+            </div>
+            <div class="product-rechts">
+                <h4 class="prijs-product">€ 34</h4>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="1" />
+                    <input type="hidden" name="product" value="Gegroefde kogellager" />
+                    <input type="hidden" name="prijs" value="34" />
+                    <div class="keuze">
+                        <label for="aantal">Aantal</label>
+                        <input type="number" id="aantal" name="aantal" value="1" min="1" required />
+                    </div>
+
+                    <button type="button" class="btn btn-success" type="sumbit" class="winkwlwagen-knop">Toevoegen aan winkelwagen</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                De gegroefde kogellager is een essentieel onderdeel in talloze mechanische toepassingen waarbij soepele en efficiënte draaibewegingen vereist zijn. Dankzij het diepe groefontwerp kan deze lager zowel radiale als axiale belastingen aan in beide richtingen, wat hem bijzonder veelzijdig maakt.
+            </p>
+            <p>
+                Deze lager is vervaardigd uit hoogwaardig chroomstaal en ondergaat een nauwkeurige afwerking voor een stille en langdurige werking. Het interne kogelsysteem zorgt voor minimale wrijving en verhoogde slijtvastheid, zelfs bij intensief gebruik of hoge toerentallen.
+            </p>
+            <p>
+                De gegroefde kogellager is breed inzetbaar in motorvoertuigen, fietsen, industriële machines, gereedschappen en andere toepassingen waar precisiebeweging en duurzaamheid vereist zijn.
+            </p>
+            <p>
+                ✅ <strong>Kenmerken:</strong><br>
+                - Ondersteunt zowel radiale als axiale krachten<br>
+                - Geluidsarm en wrijvingsarm ontwerp<br>
+                - Vervaardigd uit gehard staal met hoge slijtvastheid<br>
+                - Veelzijdige toepassing in diverse machines en voertuigen<br>
+                - Eenvoudig te monteren en te vervangen
+            </p>
+            <p>
+                ℹ️ <strong>Let op:</strong> Zorg voor regelmatige smering om de levensduur van de lager te maximaliseren.
+            </p>
+        </div>
+
+
+
+        <hr>
+    </div>
+</div>

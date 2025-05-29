@@ -40,15 +40,15 @@ namespace DataAccessLayer
 
             var products = new Product[]
             {
-                new Product { Name = "Nebuchadnezzar", Description = "Het schip waarop Neo voor het eerst de echte wereld leert kennen", Price = 10000.00m },
-                new Product { Name = "Jack-in Chair", Description = "Stoel met een rugsteun en metalen armen waarin mensen zitten om ingeplugd te worden in de Matrix via een kabel in de nekpoort", Price = 500.50m },
-                new Product { Name = "EMP (Electro-Magnetic Pulse) Device", Description = "Wapentuig op de schepen van Zion", Price = 129.99m },
-                new Product { Name = "Red Pill", Description = "Pil die het bewustzijn bevrijdt uit de simulatie van de Matrix", Price = 25.75m },
-                new Product { Name = "Sunglasses (Agent Style)", Description = "Zwarte zonnebril zoals gedragen door Agents in de Matrix", Price = 89.95m },
-                new Product { Name = "Kung-Fu Training Program", Description = "Directe upload van vechtkunstvaardigheden", Price = 299.99m },
-                new Product { Name = "Phone Booth Escape Kit", Description = "Rode telefooncel met directe verbinding naar de echte wereld", Price = 450.00m },
-                new Product { Name = "Sentinel Drone Replica", Description = "Schaalmodel van de vijandige machines die Zion bedreigen", Price = 175.25m },
-                new Product { Name = "The Oracle's Cookie", Description = "Famous chocolate chip cookie that makes you question reality", Price = 5.99m }
+                new Product { Naam = "Gegroefde kogellager", Beschrijving = "Ideaal voor toepassingen in machines en transportbanden.Vervaardigd uit hoogwaardig staal met precisie-afwerking voor minimale wrijving en maximale levensduur.", Prijs = 34m },
+                new Product { Naam = "Tandwiel smal achter", Beschrijving = "Smal achtertandwiel met 70 tanden voor scooters en lichte motorvoertuigen. Hoogwaardig staal voor duurzaamheid en optimale krachtoverdracht.", Prijs = 89m },
+                new Product { Naam = "Krukas origineel Piaggio", Beschrijving = "Originele Piaggio krukas voor 2-takt motoren. Hoogwaardige afwerking voor betrouwbare prestaties en soepele rotatie.", Prijs = 209m },
+                new Product { Naam = "Nokkenas", Beschrijving = "Hoogwaardige nokkenas van slijtvast staal voor precisie in klepbediening. Ideaal voor motortiming en betrouwbaarheid.", Prijs = 169m },
+                new Product { Naam = "Drijfstang ItalianRP", Beschrijving = "Set van 4 drijfstangen voor 1.8 20VT motoren. Hoogwaardig gesmeed staal voor extreme belasting en duurzaamheid.", Prijs = 329m },
+                new Product { Naam = "Professionele netwerkkabel krimptang", Beschrijving = "Metaal krimptang met ratelmechanisme voor RJ45/RJ11 connectoren. Ergonomisch ontwerp voor precisie en comfort.", Prijs = 19m },
+                new Product { Naam = "Bout M16 x 130 set", Beschrijving = "Complete set met bout, moer en ringen M16 voor zware constructies. Hoogwaardig staal voor industriële toepassingen.", Prijs = 18m },
+                new Product { Naam = "Moer voor draaideind M10x1", Beschrijving = "Verzinkte moer M10x1 met sleutelwijdte 14. Corrosiebestendig voor automotive en industriële toepassingen.", Prijs = 0.99m },
+                new Product { Naam = "Getangde aandrijfriem", Beschrijving = "Duurzame getande aandrijfriem voor efficiënte krachttransmissie. Slijtvast materiaal voor motoren en machines.", Prijs = 64.99m }
             };
             context.Products.AddRange(products);
             var parts = new Part[]

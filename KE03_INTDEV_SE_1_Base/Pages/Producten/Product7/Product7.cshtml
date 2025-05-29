@@ -2,3 +2,55 @@
 @model KE03_INTDEV_SE_1_Base.Pages.Product7.Product7Model
 @{
 }
+<div class="pagina-container">
+    <div class="items-container">
+        <h1 class="naam-product">Bout M16 x 130 set</h1>
+        <hr>
+        <div class="product-boven">
+            <div class="product-links">
+                <img class="product-foto" src="https://derijk.eu/wp-content/uploads/2018/12/1493-016160.jpg" alt="BOUT M16 x 130 + MOER M16 + 2 RING M16" />
+            </div>
+            <div class="product-rechts">
+                <h4 class="prijs-product">€ 18</h4>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="7" />
+                    <input type="hidden" name="product" value="Bout M16 x 130 set" />
+                    <input type="hidden" name="prijs" value="18" />
+                    <div class="keuze">
+                        <label for="aantal">Aantal</label>
+                        <input type="number" id="aantal" name="aantal" value="1" min="1" required />
+                    </div>
+
+                    <button type="button" class="btn btn-success" type="sumbit" class="winkwlwagen-knop">Toevoegen aan winkelwagen</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                De <strong>Bout M16 x 130 set</strong> is een hoogwaardige bevestigingsoplossing voor zware constructies, machines en voertuigen. Deze set bevat een verzinkte zeskantbout met een lengte van 130 mm, inclusief een M16 moer en twee bijpassende M16 ringen, waardoor je direct aan de slag kunt met een complete verbinding.
+            </p>
+            <p>
+                Dankzij de robuuste staalconstructie en corrosiebestendige afwerking is deze set uitermate geschikt voor zowel binnen- als buitentoepassingen. De bout is ontworpen voor maximale klemkracht en duurzaamheid, zelfs onder zware belasting en trillingen.
+            </p>
+            <p>
+                De set is ideaal voor technische installaties, carrosseriebouw, metaalconstructies en onderhoudswerkzaamheden. De meegeleverde ringen zorgen voor een betere drukverdeling en beschermen de ondergrond tegen beschadiging.
+            </p>
+            <p>
+                ✅ <strong>Kenmerken:</strong><br>
+                - Zeskantbout M16 x 130 mm inclusief moer en 2 ringen<br>
+                - Gemaakt van verzinkt staal voor extra roestbescherming<br>
+                - Geschikt voor zware en structurele toepassingen<br>
+                - Eenvoudig te monteren met standaard gereedschap<br>
+                - Betrouwbare en langdurige verbinding
+            </p>
+            <p>
+                ℹ️ <strong>Toepassingstip:</strong> Draai de bout met een momentsleutel aan voor optimale bevestiging en veiligheid.
+            </p>
+        </div>
+
+
+        <hr>
+    </div>
+</div>

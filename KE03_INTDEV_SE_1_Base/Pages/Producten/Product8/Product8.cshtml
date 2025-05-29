@@ -2,3 +2,54 @@
 @model KE03_INTDEV_SE_1_Base.Pages.Product8.Product8Model
 @{
 }
+<div class="pagina-container">
+    <div class="items-container">
+        <h1 class="naam-product">Moer voor draaideind M10x1</h1>
+        <hr>
+        <div class="product-boven">
+            <div class="product-links">
+                <img class="product-foto" src="https://cdn.webshopapp.com/shops/230642/files/335055421/image.jpg" alt="Moer voor draaideind M10x1 - verzinkt (sleutelwijdte 14)" />
+            </div>
+            <div class="product-rechts">
+                <h4 class="prijs-product">€ 0,99</h4>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="8" />
+                    <input type="hidden" name="product" value="Moer voor draaideind M10x1" />
+                    <input type="hidden" name="prijs" value="0.99" />
+                    <div class="keuze">
+                        <label for="aantal">Aantal</label>
+                        <input type="number" id="aantal" name="aantal" value="1" min="1" required />
+                    </div>
+
+                    <button type="button" class="btn btn-success" type="sumbit" class="winkwlwagen-knop">Toevoegen aan winkelwagen</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                De <strong>Moer voor draaideind M10x1</strong> is een duurzame en nauwkeurig vervaardigde moer met fijne schroefdraad, geschikt voor toepassingen waar precisie en betrouwbaarheid essentieel zijn. Deze verzinkte moer is ontworpen voor gebruik met M10x1 draaistangen of draadeinden met fijne metrische draad.
+            </p>
+            <p>
+                Dankzij de verzinkte afwerking biedt de moer uitstekende bescherming tegen roest en slijtage, wat haar geschikt maakt voor zowel binnen- als buitengebruik. De sleutelwijdte van 14 mm zorgt voor een stevige grip tijdens montage met standaard gereedschap.
+            </p>
+            <p>
+                Ideaal voor mechanische toepassingen, constructiewerk, automotive projecten of installaties waarbij een fijne draad vereist is. De moer sluit perfect aan op nauwkeurig bewerkte schroefdraad en zorgt voor een veilige en stabiele verbinding.
+            </p>
+            <p>
+                ✅ <strong>Kenmerken:</strong><br>
+                - M10x1 fijne draad (metrisch)<br>
+                - Verzinkt staal voor roestbescherming<br>
+                - Sleutelwijdte: 14 mm<br>
+                - Geschikt voor diverse industriële en doe-het-zelf projecten
+            </p>
+            <p>
+                ℹ️ <strong>Toepassingstip:</strong> Gebruik een borgmiddel (zoals Loctite) voor extra beveiliging in trillingsgevoelige omgevingen.
+            </p>
+        </div>
+
+
+        <hr>
+    </div>
+</div>

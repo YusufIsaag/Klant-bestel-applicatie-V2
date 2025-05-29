@@ -11,11 +11,11 @@ namespace DataAccessLayer.Models
     {        
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Naam { get; set; }
 
-        public string Description { get; set; }
+        public string Beschrijving { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal Prijs { get; set; }
 
         public ICollection<Order> Orders { get; } = new List<Order>();
 

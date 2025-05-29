@@ -2,3 +2,55 @@
 @model KE03_INTDEV_SE_1_Base.Pages.Product2.Product2Model
 @{
 }
+<div class="pagina-container">
+    <div class="items-container">
+        <h1 class="naam-product">Tandwiel smal achter</h1>
+        <hr>
+        <div class="product-boven">
+            <div class="product-links">
+                <img class="product-foto" src="https://www.motorpromo.nl/img/large/16668658591.jpg" alt="(5B2f) Tandwiel smal achter 70 tand as 47mm st=6x24" />
+            </div>
+            <div class="product-rechts">
+                <h4 class="prijs-product">€ 89</h4>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="2" />
+                    <input type="hidden" name="product" value="Tandwiel smal achter" />
+                    <input type="hidden" name="prijs" value="89" />
+                    <div class="keuze">
+                        <label for="aantal">Aantal</label>
+                        <input type="number" id="aantal" name="aantal" value="1" min="1" required />
+                    </div>
+
+                    <button type="button" class="btn btn-success" type="sumbit" class="winkwlwagen-knop">Toevoegen aan winkelwagen</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                Dit smalle tandwiel voor de achterzijde is een essentieel component binnen de aandrijflijn van tweewielers of lichte voertuigen. Het zorgt voor een efficiënte overdracht van kracht van de motor naar het wiel en draagt direct bij aan de prestaties en rijeigenschappen van het voertuig.
+            </p>
+            <p>
+                Het tandwiel is vervaardigd uit gehard staal en beschikt over een nauwkeurige tandgeometrie, waardoor het perfect aansluit op de ketting of riem. De slanke constructie maakt het lichtgewicht, wat zorgt voor een betere acceleratie zonder concessies te doen aan de sterkte.
+            </p>
+            <p>
+                Dankzij de roestbestendige afwerking en duurzame legering is dit tandwiel uitermate geschikt voor langdurig gebruik in uiteenlopende weersomstandigheden.
+            </p>
+            <p>
+                ✅ <strong>Kenmerken:</strong><br>
+                - Nauwkeurig gefreesde tandvorm voor optimale krachtoverdracht<br>
+                - Duurzaam staal met slijtvaste coating<br>
+                - Lichtgewicht ontwerp voor sportieve prestaties<br>
+                - Perfecte pasvorm voor achterzijde van scooters en brommers<br>
+                - Bestand tegen zware belasting en hoge toerentallen
+            </p>
+            <p>
+                ℹ️ <strong>Tip:</strong> Vervang bij kettingslijtage ook je tandwielset om overmatige slijtage te voorkomen.
+            </p>
+        </div>
+
+
+        <hr>
+    </div>
+</div>

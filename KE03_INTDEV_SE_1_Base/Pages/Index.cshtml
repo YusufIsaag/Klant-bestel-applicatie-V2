@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<link rel="icon" type="image/png" href="/fav.png" />
 
 <div class="reclame">
     <h2>Summer sale</h2>
@@ -10,13 +11,14 @@
 </div>
 
 <div class="producten-container">
-    <div class="producten">
+    <div class="producten-lijst">
         <div class="box-container">
         <button class="producten product1">
             <a asp-area="" asp-page="/Producten/Product1/Product1">
                 <img src="https://www.gnesato.com/wp-content/uploads/2021/07/14706106.jpg" alt="Gegroefde kogellager" />
             </a>
             <p class="naam-product">Tandwiel smal achter</p>
+                <p class="prijs">€ 34</p>
         </button>
         </div>
 
@@ -25,70 +27,78 @@
             <a asp-area="" asp-page="/Producten/Product2/Product2">
                 <img src="https://www.motorpromo.nl/img/large/16668658591.jpg" alt="(5B2f) Tandwiel smal achter 70 tand as 47mm st=6x24" />
             </a>
-            <p class="naam-product">Tandwiel smal achter</pc>
+            <p class="naam-product">Tandwiel smal achter</p>
+                <p class="prijs">€ 89</p>
         </button>
         </div>
 
         <div class="box-container">
         <button class="producten product3">
-            <a>
+             <a asp-area="" asp-page="/Producten/Product3/Product3">
                 <img src="https://www.piaggio-parts.nl/media/catalog/product/cache/6/thumbnail/500x500/9df78eab33525d08d6e5fb8d27136e95/7/0/70649.jpg" alt="Krukas origineel Piaggio 2-takt 4316255" />
             </a>
             <p class="naam-product">Krukas origineel Piaggio</p>
+                <p class="prijs">€ 209</p>
         </button>
         </div>
 
-                    <div class="box-container">
-                        <button class="producten product4">
-            <a>
-                <img src="https://www.autofirst-nederland.nl/storage/QLt2kxR4kUWMHQopGhI7xu3j5ZCoKL9EjN98ouHu.jpg" alt="Nokkenkas" />
+        <div class="box-container">
+            <button class="producten product4">
+            <a asp-area="" asp-page="/Producten/Product4/Product4">
+                <img src="https://www.autofirst-nederland.nl/storage/QLt2kxR4kUWMHQopGhI7xu3j5ZCoKL9EjN98ouHu.jpg" alt="Nokkenas" />
             </a>
-            <p class="naam-product">Nokkenkas</p>
+            <p class="naam-product">Nokkenas</p>
+                <p class="prijs">€ 169</p>
         </button>
         </div>
 
-                        <div class="box-container">
-                            <button class="producten product5">
-            <a>
+        <div class="box-container">
+                <button class="producten product5">
+            <a asp-area="" asp-page="/Producten/Product5/Product5">
                 <img src="https://www.team-vag.nl/742-large_default/drijfstang-italianrp-18-20vt-set-van-4-stuks.jpg" alt="Drijfstang ItalianRP 1.8 20VT" />
             </a>
             <p class="naam-product">Drijfstang ItalianRP</p>
+                <p class="prijs">€ 329</p>
         </button>
         </div>
 
-                            <div class="box-container">
-                                <button class="producten product6">
-            <a>
+        <div class="box-container">
+               <button class="producten product6">
+                <a asp-area="" asp-page="/Producten/Product6/Product6">
                 <img src="https://www.kabeldirect.nl/media/image/41/b5/44/0-252Fd-252Fd-252F7-252F0dd70d9911eef847a6c4bae15a2758de7967bc01_KD15990_1.jpg" alt="Professionele Netwerkkabel Krimptang - RJ45, RJ11, RJ12, RJ10 - met Ratelmechanisme - Metaal" />
             </a>
             <p class="naam-product">Professionele netwerkkabel krimptang</p>
+                <p class="prijs">€ 19</p>
         </button>
         </div>
 
         <div class="box-container">
         <button class="producten product7">
-            <a>
+                <a asp-area="" asp-page="/Producten/Product7/Product7">
                 <img src="https://derijk.eu/wp-content/uploads/2018/12/1493-016160.jpg" alt="BOUT M16 x 130 + MOER M16 + 2 RING M16" />
             </a>
             <p class="naam-product">Bout M16 x 130 + moer M16 + 2 ring M16</p>
+                <p class="prijs">€ 18</p>
         </button>
         </div>
 
         <div class="box-container">
         <button class="producten product8">
-            <a>
+                <a asp-area="" asp-page="/Producten/Product8/Product8">
                 <img src="https://cdn.webshopapp.com/shops/230642/files/335055421/image.jpg" alt="Moer voor draaideind M10x1 - verzinkt (sleutelwijdte 14)" />
             </a>
             <p class="naam-product">Moer voor draaideind M10x1</p>
+                <p class="prijs">€ 0,99</p>
         </button>
         </div>
 
         <div class="box-container">
         <button class="producten product9">
-            <a>
+                <a asp-area="" asp-page="/Producten/Product9/Product9">
                 <img src="https://m.media-amazon.com/images/I/61wffVHGcML.jpg" alt="Getangde aandrijfriem" />
             </a>
             <p class="naam-product">Getangde aandrijfriem</p>
+                <p class="prijs">€ 64,99</p>
         </button>
     </div>
 

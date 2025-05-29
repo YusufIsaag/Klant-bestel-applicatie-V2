@@ -8,9 +8,10 @@ namespace DataAccessLayer.Models
 {
     public class Winkelwagen
     {
+        public int Id { get; set; }
+        public int ProdutId { get; set; }
         public Product Product { get; set; }
-        public int Aantal { get; set; }
-
-        //public decimal TotaalBedrag = Product.Price * Aantal;
+        public int Aantal { get; set; } = 1;
+        public decimal TotaalBedrag { get; set; }
     }
 }

@@ -2,3 +2,54 @@
 @model KE03_INTDEV_SE_1_Base.Pages.Product9.Product9Model
 @{
 }
+<div class="pagina-container">
+    <div class="items-container">
+        <h1 class="naam-product">Getangde aandrijfriem</h1>
+        <hr>
+        <div class="product-boven">
+            <div class="product-links">
+                <img class="product-foto" src="https://m.media-amazon.com/images/I/61wffVHGcML.jpg" alt="Getangde aandrijfriem" />
+            </div>
+            <div class="product-rechts">
+                <h4 class="prijs-product">€ 64,99</h4>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="9" />
+                    <input type="hidden" name="product" value="Getangde aandrijfriem" />
+                    <input type="hidden" name="prijs" value="64.99" />
+                    <div class="keuze">
+                        <label for="aantal">Aantal</label>
+                        <input type="number" id="aantal" name="aantal" value="1" min="1" required />
+                    </div>
+
+                    <button type="button" class="btn btn-success" type="sumbit" class="winkwlwagen-knop">Toevoegen aan winkelwagen</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                De <strong>Getangde aandrijfriem</strong> is een essentieel onderdeel van het aandrijfsysteem van een motorvoertuig of machine. Deze hoogwaardige riem is voorzien van precisievertandingen die zorgen voor een perfecte grip op de bijbehorende tandwielen, wat resulteert in een stille, slipvrije en efficiënte overbrenging van kracht.
+            </p>
+            <p>
+                Dankzij het gebruik van slijtvaste, hittebestendige materialen is deze riem bestand tegen hoge belastingen en langdurig gebruik. De getande structuur voorkomt doorslippen en garandeert een nauwkeurige timing tussen bewegende onderdelen.
+            </p>
+            <p>
+                Ideaal voor gebruik in motorblokken, industriële machines en andere aandrijfsystemen waar een betrouwbare en duurzame riem vereist is.
+            </p>
+            <p>
+                ✅ <strong>Kenmerken:</strong><br>
+                - Getand profiel voor optimale krachtoverbrenging<br>
+                - Gemaakt van hittebestendig rubber met versterkte vezels<br>
+                - Hoge slijtvastheid en lange levensduur<br>
+                - Geschikt voor diverse toepassingen in automotive en industrie
+            </p>
+            <p>
+                ℹ️ <strong>Onderhoudstip:</strong> Vervang de aandrijfriem tijdig volgens de aanbevelingen van de fabrikant om schade aan motoronderdelen te voorkomen.
+            </p>
+        </div>
+
+
+        <hr>
+    </div>
+</div>
