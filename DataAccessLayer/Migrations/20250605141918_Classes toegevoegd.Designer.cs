@@ -3,6 +3,7 @@ using System;
 using DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(MatrixIncDbContext))]
-    partial class MatrixIncDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250605141918_Classes toegevoegd")]
+    partial class Classestoegevoegd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.7");
@@ -79,7 +82,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("DataAccessLayer.Models.Product", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -94,32 +97,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<decimal>("Prijs")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("Id");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("DataAccessLayer.Models.WinkelwagenProduct", b =>
-                {
-                    b.Property<int>("WinkelwagenProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Aantal")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("SessionId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("WinkelwagenProductId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("winkelwagenProducts");
                 });
 
             modelBuilder.Entity("OrderProduct", b =>
@@ -127,12 +107,12 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("OrdersId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ProductsProductId")
+                    b.Property<int>("ProductsId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("OrdersId", "ProductsProductId");
+                    b.HasKey("OrdersId", "ProductsId");
 
-                    b.HasIndex("ProductsProductId");
+                    b.HasIndex("ProductsId");
 
                     b.ToTable("OrderProduct");
                 });
@@ -142,12 +122,12 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("PartsId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ProductsProductId")
+                    b.Property<int>("ProductsId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("PartsId", "ProductsProductId");
+                    b.HasKey("PartsId", "ProductsId");
 
-                    b.HasIndex("ProductsProductId");
+                    b.HasIndex("ProductsId");
 
                     b.ToTable("PartProduct");
                 });
@@ -163,17 +143,6 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("DataAccessLayer.Models.WinkelwagenProduct", b =>
-                {
-                    b.HasOne("DataAccessLayer.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("OrderProduct", b =>
                 {
                     b.HasOne("DataAccessLayer.Models.Order", null)
@@ -184,7 +153,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasOne("DataAccessLayer.Models.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductsProductId")
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -199,7 +168,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasOne("DataAccessLayer.Models.Product", null)
                         .WithMany()
-                        .HasForeignKey("ProductsProductId")
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

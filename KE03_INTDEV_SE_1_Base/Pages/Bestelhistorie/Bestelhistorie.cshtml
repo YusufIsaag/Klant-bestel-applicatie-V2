@@ -1,4 +1,32 @@
 ﻿@page
 @model KE03_INTDEV_SE_1_Base.Pages.Bestelhistorie.BestelhistorieModel
 @{
+    ViewData["Title"] = "Bestelhistorie";
 }
+
+<div class="container mt-4">
+    <h2>Jouw bestelhistorie</h2>
+
+    @if (Model.Bestellingen.Any())
+    {
+        @foreach (var bestelling in Model.Bestellingen)
+        {
+            <div class="mb-4 p-3 border rounded">
+                <h5>Bestelling @bestelling.BestellingId - @bestelling.Datum</h5>
+
+                <table class="table table-sm">
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" ><strong>Totaal:</strong></td>
+                            <td><strong>€@bestelling.TotaalBedrag</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        }
+    }
+    else
+    {
+        <p>Je hebt nog geen bestellingen geplaatst.</p>
+    }
+</div>

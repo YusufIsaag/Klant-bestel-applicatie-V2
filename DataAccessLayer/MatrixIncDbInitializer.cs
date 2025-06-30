@@ -61,7 +61,14 @@ namespace DataAccessLayer
             context.Parts.AddRange(parts);
 
             context.SaveChanges();
-
+            foreach (var product in products)
+            {
+                if (!context.Products.Any(p => p.ProductId == product.ProductId))
+                {
+                    context.Products.Add(product);
+                }
+            }
+            context.SaveChanges();
             context.Database.EnsureCreated();
         }
     }

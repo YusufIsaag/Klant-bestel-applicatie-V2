@@ -1,0 +1,95 @@
+﻿@page
+@model KE03_INTDEV_SE_1_Base.Pages.Afrekenen.Afrekenen2Model
+@{
+    ViewData["Title"] = "Gegevens invullen";
+}
+
+<div class="container mt-4">
+    <h2>Bestelling afronden</h2>
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Persoonlijke gegevens</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-page-handler="AddToBestelhistorie">
+                        <div class="mb-3">
+                            <label asp-for="Klantgegevens.Voornaam" class="form-label"></label>
+                            <input asp-for="Klantgegevens.Voornaam" class="form-control" required />
+                            <span asp-validation-for="Klantgegevens.Voornaam" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Klantgegevens.Achternaam" class="form-label"></label>
+                            <input asp-for="Klantgegevens.Achternaam" class="form-control" required />
+                            <span asp-validation-for="Klantgegevens.Achternaam" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Klantgegevens.Email" class="form-label"></label>
+                            <input asp-for="Klantgegevens.Email" type="email" class="form-control" required />
+                            <span asp-validation-for="Klantgegevens.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Klantgegevens.Telefoon" class="form-label"></label>
+                            <input asp-for="Klantgegevens.Telefoon" class="form-control" />
+                        </div>
+
+                        <h5 class="mt-4">Bezorgadres</h5>
+
+                        <div class="mb-3">
+                            <label asp-for="Klantgegevens.Straat" class="form-label"></label>
+                            <input asp-for="Klantgegevens.Straat" class="form-control" required />
+                            <span asp-validation-for="Klantgegevens.Straat" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Klantgegevens.Huisnummer" class="form-label"></label>
+                                <input asp-for="Klantgegevens.Huisnummer" class="form-control" required />
+                                <span asp-validation-for="Klantgegevens.Huisnummer" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Klantgegevens.Toevoeging" class="form-label"></label>
+                                <input asp-for="Klantgegevens.Toevoeging" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Klantgegevens.Postcode" class="form-label"></label>
+                                <input asp-for="Klantgegevens.Postcode" class="form-control" required />
+                                <span asp-validation-for="Klantgegevens.Postcode" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Klantgegevens.Plaats" class="form-label"></label>
+                                <input asp-for="Klantgegevens.Plaats" class="form-control" required />
+                                <span asp-validation-for="Klantgegevens.Plaats" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Klantgegevens.Land" class="form-label"></label>
+                            <select asp-for="Klantgegevens.Land" class="form-select">
+                                <option value="Nederland">Nederland</option>
+                                <option value="België">België</option>
+                                <option value="Duitsland">Duitsland</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input asp-for="Klantgegevens.AkkoordMetVoorwaarden" class="form-check-input" required />
+                            <label asp-for="Klantgegevens.AkkoordMetVoorwaarden" class="form-check-label">
+                                Ik ga akkoord met de <a href="/Privacy">Privacy voorwaarden</a>
+                            </label>
+                            <span asp-validation-for="Klantgegevens.AkkoordMetVoorwaarden" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Bestelling bevestigen</button>
+                    </form>
+                </div>
+            </div>
+        </div>

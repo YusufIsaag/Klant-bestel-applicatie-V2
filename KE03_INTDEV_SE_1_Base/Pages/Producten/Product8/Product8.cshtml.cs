@@ -1,12 +1,36 @@
+using DataAccessLayer;
+using DataAccessLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+
 
 namespace KE03_INTDEV_SE_1_Base.Pages.Product8
 {
     public class Product8Model : PageModel
     {
-        public void OnGet()
+        public readonly MatrixIncDbContext _context;
+        public Product8Model(MatrixIncDbContext context)
         {
+            _context = context;
         }
+        public IActionResult OnPostToevoegenAanWinkelwagen(int productId, int aantal)
+        {
+            var product = _context.Products.Find(productId);
+            var sessionId = HttpContext.Session.Id;
+
+            var winkelwagenItem = new WinkelwagenProduct
+            {
+                ProductId = product.ProductId,
+                Aantal = aantal,
+                Product = product,
+            };
+            TempData["AddNotification"] = product.Naam;
+            TempData["De;eteNotification"] = product.Naam;
+
+            _context.winkelwagenProducts.Add(winkelwagenItem);
+            _context.SaveChanges();
+            return RedirectToPage();
+        }
+
     }
 }

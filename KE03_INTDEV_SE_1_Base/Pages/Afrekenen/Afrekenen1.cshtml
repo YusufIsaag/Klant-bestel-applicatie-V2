@@ -1,0 +1,81 @@
+﻿@page
+@model KE03_INTDEV_SE_1_Base.Pages.Afrekenen.Afrekenen1Model
+@{
+    ViewData["Title"] = "Afrekenen";
+}
+
+<div class="container mt-5">
+    <h2>Afrekenen</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5>Jouw bestelling</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.WinkelwagenItems != null)
+                    {
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Aantal</th>
+                                    <th>Prijs</th>
+                                    <th>Totaal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.WinkelwagenItems)
+                                {
+                                    <tr>
+                                        <td>@item.Product.Naam</td>
+                                        <td>@item.Aantal</td>
+                                        <td>€@item.Product.Prijs</td>
+                                         <td>€@item.TotaalBedrag</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p>Je winkelwagen is leeg.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5>Overzicht</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotaal:</span>
+                        <span>€@Model.Subtotaal.ToString("0.00")</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Verzendkosten:</span>
+                        <span>€@Model.Verzendkosten.ToString("0.00")</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Totaal:</span>
+                        <span>€@Model.TotaalBedrag.ToString("0.00")</span>
+                    </div>
+
+
+                 
+                        
+                    <form method="post" class="mt-4">
+                        <button type="submit" asp-page="/Afrekenen/Afrekenen2" class="btn btn-success w-100">
+                            Betalen
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

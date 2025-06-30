@@ -13,6 +13,8 @@ namespace DataAccessLayer
         public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Part> Parts { get; set; }
+        public DbSet<WinkelwagenProduct> winkelwagenProducts { get; set; }
+        public DbSet<Bestelling> Bestellingen { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,7 +22,6 @@ namespace DataAccessLayer
                 .HasMany(c => c.Orders)
                 .WithOne(o => o.Customer)
                 .HasForeignKey(o => o.CustomerId).IsRequired();
-
             //modelBuilder.Entity<Order>()
             //    .HasOne(o => o.Customer)
             //    .WithMany(c => c.Orders)
@@ -33,6 +34,7 @@ namespace DataAccessLayer
             modelBuilder.Entity<Part>()
                 .HasMany(p => p.Products)
                 .WithMany(p => p.Parts);
+
 
             base.OnModelCreating(modelBuilder);
         }

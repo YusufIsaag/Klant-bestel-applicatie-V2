@@ -1,4 +1,62 @@
 ﻿@page
 @model KE03_INTDEV_SE_1_Base.Pages.Winkelwagen.WinkelwagenModel
 @{
+    ViewData["Title"] = "Winkelwagen";
 }
+
+<div class="container">
+    <h2>Je winkelwagen</h2>
+
+    @if (Model.WinkelwagenProducten != null && Model.WinkelwagenProducten.Any())
+    {
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Aantal</th>
+                    <th>Prijs per stuk</th>
+                    <th>Totaal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.WinkelwagenProducten)
+                {
+                    <tr>
+                        <td>@item.Product.Naam</td>
+                        <td>@item.Aantal</td>
+                        <td>€@item.Product.Prijs</td>
+                        <td>€@item.TotaalBedrag</td>
+                        <td>
+                            <form method="post" asp-page-handler="RemoveItem">
+                                <input type="hidden" name="itemId" value="@item.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger">Verwijder</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                    <td colspan="3" class="text-end"><strong>Totaal alle producten:</strong></td>
+                    <td><strong>@Model.WinkelwagenProducten.Sum(item => item.TotaalBedrag).ToString("C")</strong></td>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <div class="text-end mt-3">
+            <a asp-page="/Afrekenen/Afrekenen2" class="btn btn-success">
+                Verder naar bestellen
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Je winkelwagen is leeg. <a href="/Index">Verder winkelen</a>
+        </div>
+    }
+</div>

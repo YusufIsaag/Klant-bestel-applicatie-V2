@@ -162,10 +162,10 @@
     }
 
     .product-foto {
-        height: 420px;
+        height: 326px;
         border: 1px solid;
         border-radius: 10px;
-        width: 420px;
+        width: 426px;
     }
 
     .product-boven {
@@ -582,7 +582,7 @@
 
     .btn-success {
         height: 50px;
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
 
@@ -796,7 +796,7 @@
 
     .btn-success {
         height: 50px;
-        margin-left: 30px;
+        margin-left: 5px;
     }
 
 
